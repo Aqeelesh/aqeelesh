@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Bajra yield'],
+                ['2001', 281],
+                ['2002', 277],
+                ['2003', 275],
+                ['2004', 457],
+                ['2005', 200],
+                ['2006', 280],
+                ['2007', 150]
+            ]);
+
+            var options = {
+                title: 'Yield of bajra in lakh tonnes',
+                curveType: 'function',
+                hAxis: {
+                    title: 'Year'
+                },
+                vAxis: {
+                    title: 'tonnes'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Place your pointer on the line and Trace the Co-ordinates for a detailed view </h4><br>
+
+</body>
+
+</html>
