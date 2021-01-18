@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function yellow() {
+            document.getElementById("use").setAttribute("style", "background-color: yellow;");
+        }
+
+        function green() {
+            document.getElementById("use").setAttribute("style", "background-color: green;");
+        }
+
+        function beige() {
+            document.getElementById("use").setAttribute("style", "background-color: rebeccapurple;");
+        }
+    </script>
+
+</head>
+
+<body id="use">
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h1><b>Awesome<br> online videos</b></h1>
+                </td>
+                <td>
+                    <div align="center" style="margin-bottom: 0;">
+                        <div align="right">
+                            Backgroud:
+                            <button type="button" onclick="yellow()" style="background-color:yellow;">yellow</button>
+                            <button type="button" onclick="green()" style="background-color: green;">green</button>
+                            <button type="button" onclick="beige()" style="background-color:rebeccapurple;">purple</button>
+                        </div>
+                        <section>
+                            <video id="assign" width="600" controls>
+                    <source src=http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4 type=video/mp4>
+                    
+                    </video>
+
+                            <script>
+                                var vide = document.getElementById("assign");
+
+                                function plv() {
+                                    vide.play();
+                                }
+
+                                function pav() {
+                                    vide.pause();
+                                }
+                            </script>
+                        </section>
+
+                        <section>
+                            <button onclick="plv()" type="button" align="right">Play Video</button>
+                            <button onclick="pav()" type="button" align="right">Pause Video</button><br>
+                        </section>
+                </td>
+
+            </tr>
+        </table>
+
+    </center>
+</body>
+
+</html>
