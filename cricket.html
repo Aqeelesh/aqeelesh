@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>T20 Match</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <h1>Board of Control for Cricket in India</h1>
+    <h3>T20 Cricket Match Statistics</h3>
+
+    <div id="chart_div"></div>
+    <script>
+        google.charts.load('current', {
+            packages: ['corechart', 'line']
+        });
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Runs');
+            data.addRows([
+                [0, 0],
+                [5, 40],
+                [10, 75],
+                [15, 140],
+                [20, 210]
+            ]);
+
+            var options = {
+                hAxis: {
+                    title: 'Overs'
+                },
+                vAxis: {
+                    title: 'Runs'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+    <h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Place your pointer on the line and Trace the Co-ordinates for a detailed view</h4><br>
+
+</body>
+
+</html>
