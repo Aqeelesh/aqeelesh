@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('rashid-grey-Ujq_xcJ3ewo-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        input[type=text] {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+        
+        input[type=email] {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+        
+        input[type=number] {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+        
+        input[type=submit] {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <span style="vertical-align: middle;"><font size= "7"> Hot Balloon Riding XENA EVENTS </font></span>
+    </section>
+
+    <h2> Contact form </h2>
+
+    <div>
+        <form>
+            <label for="fname">Full Name</label> <input type="text" name="fullname" required="required"><br>
+            <label for="email">E mail</label> <input type="email" name="email" required="required" required multiple="multiple"><br>
+            <label for="age">Age</label> <input type="number" min="18" required="required"> <br>
+            <label for="City">City</label> <input type="text" list="city" required="required" /><br>
+            <datalist id="city">
+   <option value="Bangalore">
+   <option value="Vizag">
+   <option value=" Rajkot">
+   </datalist>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
